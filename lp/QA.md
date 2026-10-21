@@ -1,0 +1,42 @@
+# NOMA DRIP — QA
+
+検証日時: 2026-10-22 00:40 JSTごろ。公開済みUI commit: 744e7df4fcca65385ca8cc1988979d082f141e97。GitHub Pages deployment workflow success を確認。
+
+公開URL:
+- https://takumim080-creator.github.io/buhyeen-web-portfolio/lp/
+- https://takumim080-creator.github.io/buhyeen-web-portfolio/lp/guide.html
+
+## 実ブラウザ
+
+ChatGPT in-app browser で正式公開URLを検証。ローカルfile表示・localhostの制限迂回はしていない。
+
+| ページ | 幅 | 横方向overflow | 写真 | 本文 |
+| --- | --- | --- | --- | --- |
+| LP | 320 / 390 / 768 / 1440 | なし | 全7表示位置が読込成功 | 16px |
+| ガイド | 320 / 390 / 768 / 1440 | なし | 読込成功 | 16px |
+
+スクロールバー分を除いたclientWidthとscrollWidthの一致を確認。各幅の測定JSONは納品ZIPのqa/lp-browser-matrix.json。
+
+- PC・スマホの主要画面、本文と写真、固定購入導線を目視。
+- スマホメニュー開閉、Esc閉じ、ページ内移動時のメニュー閉じを実操作確認。
+- ガイドへの移動・製品選択への戻りを実操作確認。
+- FAQ開閉を実操作確認。
+- キーボードTabで本文スキップに可視フォーカス、Enter後にMAINへフォーカスすることを確認。
+- 購入デモ: 数量3点で¥11,880、数量2点のスマホデモ、確認完了を確認。
+- Escでdialogが閉じ、元の購入ボタンにフォーカスが戻ることを確認。
+- ブラウザのフォーム数0、個人情報入力欄0。ソースにもfetch / XHR / sendBeacon / storage / cookie / 解析 / 決済処理なし。
+- 公開ページのブラウザコンソールエラー0件。
+- フッターとデモ画面の架空表示を確認。
+- 動きを減らすCSSを静的確認。通常時もページ内移動は即時で、装飾アニメーションは使っていない。OSのreduced-motion設定切替自体は実施していない。
+
+## 静的検査
+
+2ページともh1が1つ。全ローカルhrefとページ内アンカーの参照先が存在。相対パスのみ。全画像にaltあり。JavaScriptの構文検査成功。
+
+## プレビュー証跡
+
+納品ZIPのqa/ に lp-desktop.jpg、lp-mobile.jpg、lp-demo.jpg、lp-demo-mobile.jpg、lp-guide-desktop.jpg、lp-full-desktop.jpg を保存。ソースと生成プロンプト・元画像を同梱。
+
+## 制約
+
+架空の製品デザインであり、実物の性能・折りたたみ動作・食品接触の安全性は検証対象ではない。収納ケースはコンセプト仕様に含むが、写真に写っていると表現していない。
