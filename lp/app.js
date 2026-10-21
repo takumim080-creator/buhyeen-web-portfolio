@@ -1,0 +1,9 @@
+const menuButton=document.querySelector('.menu-toggle');const nav=document.querySelector('#site-nav');
+function closeMenu(){nav?.classList.remove('open');menuButton?.setAttribute('aria-expanded','false');menuButton.textContent='メニュー';}
+menuButton?.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';nav.classList.toggle('open',open);menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'閉じる':'メニュー';});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav?.classList.contains('open')){closeMenu();menuButton.focus();}});nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+const dialog=document.querySelector('#purchase-dialog');let opener;const price=3960;const money=n=>'¥'+n.toLocaleString('ja-JP');
+document.querySelector('[data-buy]')?.addEventListener('click',e=>{opener=e.currentTarget;document.querySelector('[data-confirm]').hidden=false;document.querySelector('[data-complete]').hidden=true;document.querySelector('#quantity').value='1';document.querySelector('[data-total]').textContent=money(price);dialog.showModal();});
+document.querySelector('#quantity')?.addEventListener('change',e=>document.querySelector('[data-total]').textContent=money(price*Number(e.target.value)));
+document.querySelector('[data-confirm-buy]')?.addEventListener('click',()=>{document.querySelector('[data-confirm]').hidden=true;document.querySelector('[data-complete]').hidden=false;document.querySelector('[data-order-text]').textContent='NOMA DRIP / マットブラック × '+document.querySelector('#quantity').value+'点の選択を確認しました。';document.querySelector('[data-complete] h2').focus();});
+document.querySelectorAll('[data-close-dialog]').forEach(b=>b.addEventListener('click',()=>dialog.close()));dialog?.addEventListener('close',()=>opener?.focus());

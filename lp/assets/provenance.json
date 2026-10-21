@@ -1,0 +1,27 @@
+{
+  "generator": "ChatGPT built-in image_gen",
+  "assets": [
+    {
+      "site": "lp",
+      "filename": "lp-dripper-product.png",
+      "file_id": "file_00000000c4f881f49f8c31c6052c1b2c",
+      "library_file_id": "libfile_9ee9f5a1152881919e2e65e607df6963",
+      "prompt": "Use case: product-mockup. Asset type: independent 3:2 landscape website image for a fictional brand. Premium studio product photograph of one original fictional portable collapsible coffee dripper. Precisely designed matte-black silicone conical ridged pour-over dripper, three accordion folding rings, circular open top, compact flat circular support base with two short symmetrical tabs, no handle, no branding. Fully expanded dripper shown three-quarter view on warm off-white seamless surface, subtle side shadows, realistic silicone texture, isolated coherent usable physical product, no cup or accessories. Wide composition with visual breathing room. No text or logos. High-end photoreal advertising quality. One image only, no collage, no panels, no watermark. Entirely original objects.",
+      "width": 1536,
+      "height": 1024,
+      "size_bytes": 1814205,
+      "qa": "Visually reviewed; independent photoreal generated image."
+    },
+    {
+      "site": "lp",
+      "filename": "lp-dripper-travel.png",
+      "file_id": "file_00000000702881f4b228c550a996ecf3",
+      "library_file_id": "libfile_bb3825e47ddc81918e95472790b313a6",
+      "prompt": "Use case: compositing. The reference image provides the exact fictional coffee dripper product design to preserve. Create a new independent 3:2 landscape photoreal lifestyle photograph using that same exact matte-black collapsible dripper design, ring geometry and two base tabs. Editorial lifestyle product photograph at a quiet scenic campsite in the morning. One matte-black silicone conical pour-over coffee dripper with exactly three accordion folding rings, circular open top, compact flat circular support base with two short symmetrical tabs and no handle, resting over a simple white enamel camping mug. A tan paper filter inside with wet coffee grounds. An unbranded slender black gooseneck kettle entering from right pours a thin realistic water stream, person and hands outside the frame. Wooden camp table, softly blurred forest and lake beyond, warm natural morning light. Believable functional coffee brewing, no labels, no text, no logos. Product identity invariant: match reference exterior, do not invent handles or change design. One independent image, no collage, no panels, no watermark.",
+      "width": 1536,
+      "height": 1024,
+      "size_bytes": 2331328,
+      "qa": "Visually reviewed; independent photoreal generated image."
+    }
+  ]
+}
