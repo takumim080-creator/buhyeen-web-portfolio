@@ -16,3 +16,7 @@ h1,h2,h3{font-feature-settings:"palt";line-break:strict}.wall-masthead{border:0;
 @media(hover:hover) and (pointer:fine){.page-menu .category-nav button:hover{background:transparent;color:var(--red);border-bottom-color:var(--red)}}
 
 @media(max-width:800px){.photo-price{right:5px}}
+
+/* Let the price poster determine its own height, keeping the course list clear. */
+@media(min-width:801px){.page-party .party-main{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:start;min-height:0;padding-bottom:35px}.page-party .party-main figure{grid-column:1/10;grid-row:1;width:100%}.page-party .party-main .party-poster{position:relative;grid-column:9/13;grid-row:1;top:auto;right:auto;width:auto;margin:75px 0 0}}
+@media(min-width:801px) and (max-width:1050px){.page-party .party-main .party-poster{grid-column:8/13}}
