@@ -14,3 +14,5 @@
 - https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html — 主要操作44px以上。
 
 公開先: https://takumim080-creator.github.io/buhyeen-web-portfolio/lp/
+
+デザイン改修の構図・入力方法・公式原則の適用は [DESIGN.md](DESIGN.md) を参照。
