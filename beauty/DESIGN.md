@@ -12,3 +12,6 @@ PC: bounded light and slight movement inside the product photo only; labelled ch
 - [IBM Carbon Motion](https://www.carbondesignsystem.com/building-blocks/foundations/motion/overview): reserve the more visible transition for product changes; keep hover feedback brief and avoid page-wide movement.
 
 These are principles applied to a web portfolio, not claims of platform certification. No layout or code from the reference companies was copied.
+
+
+文字組みの仕上げ：製品選択は使う順序と相互連動。装飾英字・選択番号・＋を削り、日本語の名称と感触を近づけた。手順の開閉は＋／−。

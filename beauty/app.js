@@ -12,7 +12,7 @@ const money=n=>'¥'+n.toLocaleString('ja-JP');
 function enterPhoto(img){if(reduced())return;img.getAnimations().forEach(a=>a.cancel());img.animate([{opacity:.25,translate:'0 8px'},{opacity:1,translate:'0 0'}],{duration:360,easing:'cubic-bezier(.2,.7,.2,1)'});}
 document.querySelectorAll('[data-surface]').forEach(surface=>{let frame=0;surface.addEventListener('pointermove',e=>{if(!matchMedia('(hover:hover) and (pointer:fine)').matches||reduced())return;cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>{const r=surface.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;surface.style.setProperty('--px',x*100+'%');surface.style.setProperty('--py',y*100+'%');surface.style.setProperty('--sx',(x-.5)*10+'px');surface.style.setProperty('--sy',(y-.5)*8+'px');surface.classList.add('pointer-active');});});surface.addEventListener('pointerleave',()=>{cancelAnimationFrame(frame);surface.classList.remove('pointer-active');surface.style.setProperty('--sx','0px');surface.style.setProperty('--sy','0px');});});
 const stage=document.querySelector('[data-product-stage]');
-const purposes={toner:'01 / 洗顔のあと。さらりとした感触から。',serum:'02 / 化粧水のあと。なめらかな一滴を。',cream:'03 / お手入れの最後。やわらかな感触を。'};
+const purposes={toner:'洗顔のあとに、さらりとした感触から。',serum:'化粧水のあとに、なめらかな一滴を。',cream:'お手入れの最後に、やわらかな感触を。'};
 const preparedPhotos=(stage||document.querySelector('[data-product-detail]'))?Object.values(products).map(p=>{const image=new Image();image.decoding='async';image.fetchPriority='low';image.src='assets/'+p.image;return image;}):[];
 document.querySelectorAll('[data-surface] img').forEach(image=>image.draggable=false);
 if(stage){const keys=Object.keys(products),buttons=[...stage.querySelectorAll('[data-stage-product]')];let active=stage.dataset.selection;

@@ -12,3 +12,6 @@ PC: a photograph can be explicitly opened for inspection; a small local crosshai
 - [IBM Carbon Motion](https://www.carbondesignsystem.com/building-blocks/foundations/motion/overview): the short progress-line movement explains stage order. Photographs change immediately, with no repeated fade or autoplay.
 
 These are principles applied to a web portfolio, not claims of platform certification. No company photograph, layout or code was copied.
+
+
+文字組みの仕上げ：工程番号は意味のある順序として維持し、重複英語見出しを削除。独立した読みもの枠は抽出工程の短い補足に統合。スマホの工程ラベルは句の境目で改行。

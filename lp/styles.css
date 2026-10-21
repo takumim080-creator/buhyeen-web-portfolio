@@ -7,3 +7,5 @@
 
 .eyebrow{letter-spacing:.08em}.phase-controls button{grid-template-columns:40px 1fr}.field-note summary>span{font-family:inherit;letter-spacing:.03em}.data-sheet{border-top:0}.masthead-note{max-width:25em}.masthead-note span{display:none}
 @media(max-width:760px){.phase-controls button{grid-template-columns:1fr}.phase-controls .phase-no{margin-bottom:4px}.masthead{padding-bottom:32px}}
+
+.phase-break{display:none}@media(max-width:760px){.phase-break{display:block}.phase-controls button{padding-inline:8px}.phase-controls button>span:nth-child(2){word-break:keep-all;overflow-wrap:normal}}
