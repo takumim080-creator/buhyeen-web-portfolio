@@ -29,3 +29,8 @@
 ## 静的検査
 
 4ページ、h1数、内部リンク・アンカー、画像参照・alt、架空表示、JavaScript構文チェック済み。実ブラウザ結果はQA.mdに追記。
+
+
+## 構図・操作の改修
+
+最新の構図、PCとタッチの操作差、公式原文との対応は [DESIGN-NOTES.md](DESIGN-NOTES.md) に記録。トップ本文は source/home.html、追加表示は experience.css、操作は experience.js。build.cjs は同ディレクトリへ4ページを生成します。
