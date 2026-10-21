@@ -13,6 +13,7 @@
 | Web画像 | 内容 |
 | --- | --- |
 | assets/interior.jpg | 自然光と木のカフェ内観 |
+| assets/handdrip-coffee.jpg | 湯気の立つ、陶器のカップ入り珈琲 |
 | assets/coffee-toast.jpg | 陶器の珈琲とバタートースト |
 | assets/pudding.jpg | カラメルプリン |
 
