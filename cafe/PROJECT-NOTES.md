@@ -17,10 +17,15 @@
 | assets/coffee-toast.jpg | 陶器の珈琲とバタートースト |
 | assets/pudding.jpg | カラメルプリン |
 
-## 参考と実装への適用
+## 設計段階の参照と実装への適用
+
+設計段階で参照された原則と、現在の実装で確認できる適用箇所を対応づけた記録です。
+
+- [Starbucks 季節特設](https://www.starbucks.co.jp/cafe/blackberry/)：商品写真から味の説明、価格・商品情報へ進む階層を参考に、トップのおやつ紹介とメニューページを構成。珈琲専用写真と軽食写真を分け、各セクションに味の説明と税込価格を配置しています。
+- [Apple公式 Layout](https://developer.apple.com/design/human-interface-guidelines/layout)：情報の優先順位・整列・画面への適応を参考に、見出しから本文、次の行動への順序を統一。PCの段組を狭い画面では縦に並べ、ナビゲーションを展開式に切り替えています。
 
 - 指定の第三者UIスキル：https://github.com/emilkowalski/skills/blob/main/skills/apple-design/SKILL.md （Apple公式ではない）。即時の押下反応、入力を妨げないUI、reduced-motion、可読性の原則を参考にした。
-- 写真、コピー、ロゴ、レイアウトは本案件用に制作。他社画像やコピーの転用なし。
+- 写真、コピー、ロゴ、レイアウトは本案件用に制作。他社の画像・コピー・コードは転用していません。
 
 ## 静的検査
 

@@ -15,10 +15,15 @@
 | assets/interior.jpg | 暖色の酒場内観 |
 | assets/yakitori-nikomi.jpg | 焼鳥6本と大根・肉の煮込み |
 
-## 参考と実装への適用
+## 設計段階の参照と実装への適用
+
+設計段階で参照された原則と、現在の実装で確認できる適用箇所を対応づけた記録です。
+
+- [塚田農場 公式サイト](https://www.tsukadanojo.jp/)：メニュー・宴会・店舗・予約を用途別に選べる導線を参考に、料理と飲み物、宴会、店舗案内を別ページへ整理。ヘッダーと各ページ末尾から次の行動を選べ、宴会ページには個人情報を扱わない相談デモを配置しています。
+- [Apple公式 Layout](https://developer.apple.com/design/human-interface-guidelines/layout)：情報の優先順位・整列・画面への適応を参考に、料理写真と大きな見出しで要点を示し、その後に価格や条件を配置。狭い画面では写真と詳細を縦に並べ、価格リストの左右整列を維持しています。
 
 - 指定の第三者UIスキル：https://github.com/emilkowalski/skills/blob/main/skills/apple-design/SKILL.md （Apple公式ではない）。押下時の即時反応、操作を止めない遷移、reduced-motion、明快な情報階層を参考にした。
-- 他社サイトの画像やコピーは転用していない。
+- 他社サイトの画像・コピー・コードは転用していません。
 
 ## 静的検査
 
