@@ -8,3 +8,4 @@
 /* Japanese reading copy remains at least 16px at every tested width. */
 .lead,.event-page-heading .lead,.event-intro>div,.discovery p,.event-plan>div>p:not(.eyebrow),.mini-timeline p,.vendor-body>p:not(.eyebrow),.schedule-intro>p:first-child,.schedule-content p,.schedule-note p,.event-facts dd,.faq-item summary,.faq-item>div{font-size:1rem}
 .fiction-note,.fiction-inline{font-size:.75rem}
+@media(max-width:560px){.faq-section h2 br{display:initial}.event-intro h2,.event-section-title h2,.event-plan h2,.event-callout h2,.concept-section .event-section-title h2{font-size:clamp(1.85rem,8.8vw,2.5rem)}}
