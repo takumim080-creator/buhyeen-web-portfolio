@@ -9,3 +9,5 @@
 @media(prefers-reduced-motion:reduce){.photo-window img{transform:none!important;transition:none!important}.has-motion [data-reveal],.has-motion [data-reveal].is-revealed{opacity:1;transform:none;transition:none}.tasting-index button::after,.tasting-index i{transition:none}}
 
 @media(max-width:800px){h1,h2{ text-wrap:balance }}
+
+.tasting-index button small{font:12px/1.6 Arial,sans-serif;margin-left:auto;white-space:nowrap;color:var(--ink)}.tasting-index button small em{font:8px sans-serif;font-style:normal}.tasting-index button i{margin-left:5px}@media(max-width:800px){.tasting-index button small{display:block;font-size:11px;margin-top:5px}.tasting-index button small em{font-size:8px}}

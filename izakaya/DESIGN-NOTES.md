@@ -19,3 +19,8 @@ Appleの重要度順序は「料理と価格→宴会条件→店の使い方」
 - [W3C Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html): 非必須の操作起因アニメーションを無効にできる考え方に従い、OSの `prefers-reduced-motion` をCSSとJavaScriptで尊重。この項目はAAAの説明資料であり、サイト全体の適合認証を意味しません。
 
 企業サイトの観察と公式ガイドラインは区別しています。他社の画像・コピー・コードは転用していません。
+
+
+## 実画面レビューからの補正
+
+飲みものの選択写真は宴会写真のビール部分を切り出したものへ変更。ジョッキ全体が見えるよう上側を優先し、選択中の商品と写真を一致させました。

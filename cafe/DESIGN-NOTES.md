@@ -19,3 +19,8 @@ Appleの重要度順序は「商品→価格→短い店便り→来店情報」
 - [W3C Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html): 非必須の操作起因アニメーションを無効にできる考え方に従い、OSの `prefers-reduced-motion` をCSSとJavaScriptで尊重。この項目はAAAの説明資料であり、サイト全体の適合認証を意味しません。
 
 企業サイトの観察と公式ガイドラインは区別しています。他社の画像・コピー・コードは転用していません。
+
+
+## 実画面レビューからの補正
+
+商品選択肢にも税込価格を併記。高さの短いPC画面でも、選ぶ位置で名称と価格を確認できます。
