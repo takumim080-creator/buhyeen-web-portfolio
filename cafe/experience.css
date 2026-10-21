@@ -19,3 +19,5 @@ h1,h2,h3{font-feature-settings:"palt";line-break:strict;overflow-wrap:normal}.te
 @media(max-width:359px){.spread-heading h1{font-size:33px}.tasting-index{gap:9px}.tasting-index button{font-size:11px}.tasting-index button small{font-size:11px}.tasting-caption{grid-template-columns:1fr auto}.tasting-caption h2{font-size:22px}.tasting-price{font-size:22px}}
 
 .photo-turners{bottom:16px}
+
+.temperature{white-space:nowrap}.tasting-caption p[data-taste-description]{text-wrap:balance}
