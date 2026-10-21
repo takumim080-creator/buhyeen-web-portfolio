@@ -14,6 +14,7 @@
 | --- | --- |
 | assets/interior.jpg | 暖色の酒場内観 |
 | assets/yakitori-nikomi.jpg | 焼鳥6本と大根・肉の煮込み |
+| assets/banquet.jpg | 焼鳥・煮込み・唐揚げなどを囲む4人卓 |
 
 ## 設計段階の参照と実装への適用
 

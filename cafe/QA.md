@@ -20,3 +20,5 @@
 画面証拠： [PC](evidence/cafe-desktop.jpg) / [スマホ](evidence/cafe-mobile.jpg) / [来店デモ](evidence/cafe-demo.jpg)
 
 編集元・画像ID・権利メモは [PROJECT-NOTES.md](PROJECT-NOTES.md)。依存関係のない静的HTML/CSS/JS。実店舗の営業や予約機能はない。
+
+追加確認：メニューの珈琲と軽食で写真を分け、被写体に合わせたaltを確認。店舗案内に現金・クレジットカードの支払方法を明示しています。画像管理用IDは非公開台帳に保管しています。
