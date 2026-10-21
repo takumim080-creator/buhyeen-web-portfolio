@@ -8,7 +8,7 @@
 
 ## 実ブラウザ
 
-ChatGPT in-app browser で正式公開URLを検証。ローカルfile表示・localhostの制限迂回はしていない。
+実ブラウザ で正式公開URLを検証。ローカルfile表示・localhostの制限迂回はしていない。
 
 | ページ | 幅 | 横方向overflow | 写真 | 本文 |
 | --- | --- | --- | --- | --- |
@@ -35,7 +35,7 @@ ChatGPT in-app browser で正式公開URLを検証。ローカルfile表示・lo
 
 ## プレビュー証跡
 
-納品ZIPのqa/ に lp-desktop.jpg、lp-mobile.jpg、lp-demo.jpg、lp-demo-mobile.jpg、lp-guide-desktop.jpg、lp-full-desktop.jpg を保存。ソースと生成プロンプト・元画像を同梱。
+納品ZIPのqa/ に lp-desktop.jpg、lp-mobile.jpg、lp-demo.jpg、lp-demo-mobile.jpg、lp-guide-desktop.jpg、lp-full-desktop.jpg を保存。ソースと制作記録・元画像を同梱。
 
 ## 制約
 
