@@ -2,3 +2,4 @@
 
 /* Reading text remains 16px at every breakpoint. */
 .opening p,.feature p,.steps p,.spec-section dl>div,.faq details p,.guide-step p,.guide-note p,.guide-note li,.scene .copy p{font-size:1rem}.hero-copy>p:not(.eyebrow){font-size:1rem}@media(max-width:760px){.hero{height:auto;min-height:0;max-height:none;background:var(--green);display:flex;flex-direction:column}.hero figure{position:relative;height:400px;flex-shrink:0}.hero figure img{object-position:55% center}.hero:after{display:none}.hero-copy{padding:40px 7% 65px;display:block;margin:0}.hero h1{font-size:2.5rem}.hero-bottom{display:none}.hero .button{margin-top:.5rem}}
+@media(max-width:760px){.hero h1{font-size:clamp(1.8rem,7.7vw,2.4rem);white-space:nowrap}}
