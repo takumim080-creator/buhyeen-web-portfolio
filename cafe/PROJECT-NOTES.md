@@ -8,15 +8,13 @@
 
 ## 画像と権利
 
-親タスクでChatGPT新規生成。Library正規転送によりPCへ取得。第三者写真・ストック写真不使用。元PNGは作業フォルダincoming-imagesと親タスクのLibraryに保存。JPEGはRGB変換・圧縮のみで被写体を変更していない。
+掲載写真は、この架空ブランドのためにChatGPTで生成したイメージです。第三者の写真・ストック素材は使用していません。Web掲載時にはRGB変換とJPEG圧縮のみを行っています。
 
-| Web画像 | Library ID | 内容 |
-| --- | --- | --- |
-| assets/interior.jpg | libfile_1f4bca02a3b48191bac7289fd2a4e2b7 | 自然光と木のカフェ内観 |
-| assets/coffee-toast.jpg | libfile_ef6b7a63a7488191960808b1734f8dff | 陶器の珈琲とバタートースト |
-| assets/pudding.jpg | libfile_f6dd9a0c74d88191b709d7e2ba57f104 | カラメルプリン |
-
-元の生成プロンプトは親タスクが管理。この子タスクには完成画像IDのみ提供されたため、原文を推測して記録していない。
+| Web画像 | 内容 |
+| --- | --- |
+| assets/interior.jpg | 自然光と木のカフェ内観 |
+| assets/coffee-toast.jpg | 陶器の珈琲とバタートースト |
+| assets/pudding.jpg | カラメルプリン |
 
 ## 参考と実装への適用
 

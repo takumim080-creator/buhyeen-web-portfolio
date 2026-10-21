@@ -8,14 +8,12 @@
 
 ## 画像と権利
 
-親タスクでChatGPT新規生成し、Library正規転送でPCへ取得。第三者写真不使用。元PNGは作業フォルダincoming-imagesおよび親タスクのLibraryに保存。JPEGはRGB変換・圧縮のみ。
+掲載写真は、この架空ブランドのためにChatGPTで生成したイメージです。第三者の写真・ストック素材は使用していません。Web掲載時にはRGB変換とJPEG圧縮のみを行っています。
 
-| Web画像 | Library ID | 内容 |
-| --- | --- | --- |
-| assets/interior.jpg | libfile_b1f1937a0914819187c0dccd9d3ec04c | 暖色の酒場内観 |
-| assets/yakitori-nikomi.jpg | libfile_d0fb9420b7e08191928393155d47ce6d | 焼鳥6本と大根・肉の煮込み |
-
-元の生成プロンプトは親タスクが管理。この子タスクには完成画像IDのみ提供されたため、原文を推測して記録していない。写真を目視し、焼鳥を6本、煮込みを大根と肉、価格は990円の設定に合わせた。
+| Web画像 | 内容 |
+| --- | --- |
+| assets/interior.jpg | 暖色の酒場内観 |
+| assets/yakitori-nikomi.jpg | 焼鳥6本と大根・肉の煮込み |
 
 ## 参考と実装への適用
 
