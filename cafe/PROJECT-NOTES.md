@@ -35,3 +35,6 @@
 ## 構図・操作の改修
 
 最新の構図、PCとタッチの操作差、公式原文との対応は [DESIGN-NOTES.md](DESIGN-NOTES.md) に記録。トップ本文は source/home.html、追加表示は experience.css、操作は experience.js。build.cjs は同ディレクトリへ4ページを生成します。
+
+
+最新トップの構図は source/home.html、追加の読みやすさと編集配置は editorial.css、記事・料理詳細の操作は experience.js。最新の参照観察と公式指針の対応は DESIGN-NOTES.md を参照。

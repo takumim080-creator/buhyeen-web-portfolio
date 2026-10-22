@@ -1,31 +1,20 @@
-# 余白珈琲 — 構図と操作の改修
+# 余白珈琲 — 窓辺から始まる喫茶店
 
-トップの主役をメニュー選択へ変更。珈琲・プリン・トーストを写真、説明、税込価格と同時に切り替える見開きとし、短い店便りを続けています。大きな写真、細い目次、ずれたキャプションで視線を動かし、同じ幅の帯やカードを繰り返さない構成です。
+トップは窓辺の店内写真を固定し、店名と短い一文だけを添えました。次に珈琲とプリンを異なる大きさで同時に紹介。商品名・税込価格・説明をそれぞれの写真へ付け、軽食と全メニューへの導線を続けています。冒頭の三択交換と前後矢印は廃止しました。
 
-PCでは写真の内側だけが小さくポインタに応答します。スマホは横スワイプと44pxの前後ボタンを用意し、縦スクロールを妨げません。目次は矢印キー・Home・Endでも操作できます。写真切替は230ms、店便りの写真だけに一度の控えめな表示変化を使っています。店便りはネイティブdetailsで開閉。通常カーソルを維持しています。
+店の便りはトースト写真と、18席や窓辺・カウンターの過ごし方を扱う一つの短い記事です。「続きを読む」でその場で開閉し、読み込みや外部移動を挟みません。写真の出現は端のわずかな変化だけ、記事を開く反応は220msに限定。スマホは写真の左右のずれと文字量を調整し、大きいタップ領域で記事を読めます。
 
-Appleの重要度順序は「商品→価格→短い店便り→来店情報」に、Carbonの表現的タイポグラフィは目次と大小写真の非対称配置に対応。動きは商品選択の関係を補助し、価格・案内・実店舗でない旨は静止状態でも読めます。メニュー・店について・店舗案内も写真のずれと編集的な見出しへ揃えました。
+## 参照サイトの観察と現行との差
 
-## 公式記述と適用範囲
+- [猿田彦珈琲 ブランドサイト](https://brand.sarutahiko.jp/)を実画面で確認。冒頭が一枚の写真と短い主題に絞られ、読み物へ進むと文字量が増える構成を観察しました。旧版のメニュー選択が冒頭全体を占める状態から、店の窓辺を主役にして、献立と記事へ写真量・文字量の緩急を付けています。
+- [ONIBUS COFFEE 中目黒駅前店](https://onibuscoffee-jp.com/pages/locations/nakameguro)を実画面と本文で確認。個店写真と店名・営業時間が近接しています。本サイトは手元にある店内写真と営業時間を近づけ、個店の席数・窓辺・カウンターの案内を具体化しました。同一店舗の入口写真はないため、無関係な外観を追加していません。
 
-以下は公式ガイド本文の記述と、このWebサイトで選んだ設計の対応です。ネイティブアプリ固有の外観を再現したものではありません。
+入口から窓辺まで連続する外観写真は今後必要な素材です。現在の写真だけで外観を推測・再現していません。
 
-- [Apple Layout](https://developer.apple.com/design/human-interface-guidelines/layout): “Order content by relative importance.” 情報の重要度を配置順へ反映。段組みは狭い画面で読み順を保った縦配置に変わります。
-- [Apple Motion](https://developer.apple.com/design/human-interface-guidelines/motion): “Add motion purposefully, supporting the experience without overshadowing it.” 選択結果の短い変化を補助する動きに限定。状態は写真だけでなく見出し・価格・選択ボタン・読み上げ通知でも伝えます。
-- [IBM Carbon Typography](https://www.carbondesignsystem.com/building-blocks/foundations/typography/style-strategies): “not restricted to a container, card, or data table” 表現的な場面の写真と文字を均等カードへ閉じず、操作部分はコンパクトに整列させています。
-- [IBM Carbon Motion](https://www.carbondesignsystem.com/building-blocks/foundations/motion/overview): “Reserve expressive motion for occasional, important moments” 常時再生やスクロールの強制を行わず、選択の瞬間に動きを絞っています。
-- [W3C Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html): ボタンはネイティブ要素で、Enter / Spaceで操作可能。
-- [W3C Target Size](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html): 最低24 CSS pxという基準に対し、主要な選択・前後操作は高さ44px以上を確保。
-- [W3C Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html): 非必須の操作起因アニメーションを無効にできる考え方に従い、OSの `prefers-reduced-motion` をCSSとJavaScriptで尊重。この項目はAAAの説明資料であり、サイト全体の適合認証を意味しません。
+## 公式指針と、採用した読みやすさ
 
-企業サイトの観察と公式ガイドラインは区別しています。他社の画像・コピー・コードは転用していません。
+[デジタル庁 タイポグラフィ](https://design.digital.go.jp/dads/foundations/typography/)の本文・UIの基準は16 CSS px以上、読み物本文の行高は少なくとも文字サイズの1.5倍という記述を本文設計へ適用。主要本文・品名・操作は16px、補足・キャプションは14pxを基本とし、本文の行高は1.8〜1.85。ブランドの見出し書体と大きさは別に設計しています。デジタル庁のデザインシステム全体への準拠を意味しません。
 
+[Apple Layout](https://developer.apple.com/design/human-interface-guidelines/layout)の重要度に基づく順序、[Apple Motion](https://developer.apple.com/design/human-interface-guidelines/motion)と[Carbon Motion](https://www.carbondesignsystem.com/building-blocks/foundations/motion/overview)の目的ある短い動きという原則を継続。OSのprefers-reduced-motionを尊重し、通常カーソル、キーボード、自由な縦スクロールを保ちます。
 
-## 実画面レビューからの補正
-
-商品選択肢にも税込価格を併記。高さの短いPC画面でも、選ぶ位置で名称と価格を確認できます。
-
-
-## 文字組みと連続性
-
-英語の章ラベル・通し番号・商品切替の斜め矢印を除去。商品名と税込価格を同じ行の基準に揃え、価格は数字幅を一定にしました。写真下の説明を写真の列へ寄せ、店便りとの境界線、各便りの区切り線、繰り返す装飾コピーを削減。下層メニューは品目名を直接見出しにし、和文の行間と説明文の長さを整えています。前後ボタン・開閉記号・フォーカス表示は操作に必要なため保持。
+企業サイトの観察は公式の規範と区別しています。他社のコピー・ロゴ・写真・コードは流用していません。Starbucks Voiceは設計段階で検索索引のみ確認された資料で、本文を直接読めた資料として採用していません。

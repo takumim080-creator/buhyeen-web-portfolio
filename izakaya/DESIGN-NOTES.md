@@ -1,31 +1,22 @@
-# ヨリミチ — 構図と操作の改修
+# ヨリミチ — 名物を同時に見て、詳しく知る
 
-料理と価格を最初に示す壁のお品書きへ変更。「串と煮込み」「もう一品」「飲みもの」の札を選ぶと、料理写真または店内写真、説明、価格と詳細リンクが切り替わります。続く宴会情報は集合料理写真に朱色の料金ポスターを重ね、7品・2時間飲み放題・税込3,800円の内容を早い段階で確認できる構成です。
+トップは焼鳥を大きく固定し、煮込みとビールを異なる大きさで同時に表示。煮込みは既存写真の器の部分をCSSで拡大して見せ、ビールは既存の切り出し画像を使用。料理と税込価格が同じ場所で読める構成です。料理の三択交換、札、判子、傾いたシールの同時強調は廃止しました。
 
-PCでは札に触れたときだけ札が少し浮きます。スマホでは札を横並びの大きいタッチ操作へ変換。写真切替は180msの短いワイプのみで、カーソル追従・全体フェード・自動再生はありません。料理ページにはネイティブボタンのカテゴリ絞り込みを設け、選択中状態と件数ではなく表示カテゴリを通知します。JavaScriptなしでは全品を表示します。
+料理名の詳細操作では、焼鳥・煮込み・ビールの内容と値段だけをdialogで確認できます。メニューページからも対象料理を選択可能。閉じると元のボタンへフォーカスが戻り、Escapeでも閉じられます。動きは詳細を開く160msの反応に限定。カテゴリ絞り込み、宴会の非送信確認デモは継続しています。
 
-Appleの重要度順序は「料理と価格→宴会条件→店の使い方」に、Carbonの表現的タイポグラフィは太い見出し・縦札・重なったポスターに対応。動きはカテゴリ選択時の写真変化と札の操作反応へ限定しています。料理・宴会・店舗案内も同じ文字組みへ揃え、金額・人数条件・お通しの扱いを維持しました。
+宴会は卓上写真と7品・2時間飲み放題・人数条件・3,800円を整列し、赤いカードの反復をなくしました。店舗の写真と営業時間・席数は近接して配置。料金は単品のお通し330円、席料なし、コースに追加なしという設定を維持しています。
 
-## 公式記述と適用範囲
+## 参照サイトの観察と現行との差
 
-以下は公式ガイド本文の記述と、このWebサイトで選んだ設計の対応です。ネイティブアプリ固有の外観を再現したものではありません。
+- [塚田農場](https://www.tsukadanojo.jp/)を実画面と本文で確認。冒頭の調理・料理映像と、店舗・日時等の実用予約欄が分離されています。映像やコピーを模倣せず、旧版の交換式写真と装飾の壁から、固定した料理の接写と別の詳細・宴会導線へ編集しました。
+- [ちばチャン 店舗情報](https://www.masumifood.jp/shop1)の本文とページ構造を確認。各店舗の案内に営業時間・来店情報がまとまっています。本サイトも店内写真と営業時間・席数・支払方法への導線を近づけています。実在する住所や電話番号は移していません。
 
-- [Apple Layout](https://developer.apple.com/design/human-interface-guidelines/layout): “Order content by relative importance.” 情報の重要度を配置順へ反映。段組みは狭い画面で読み順を保った縦配置に変わります。
-- [Apple Motion](https://developer.apple.com/design/human-interface-guidelines/motion): “Add motion purposefully, supporting the experience without overshadowing it.” 選択結果の短い変化を補助する動きに限定。状態は写真だけでなく見出し・価格・選択ボタン・読み上げ通知でも伝えます。
-- [IBM Carbon Typography](https://www.carbondesignsystem.com/building-blocks/foundations/typography/style-strategies): “not restricted to a container, card, or data table” 表現的な場面の写真と文字を均等カードへ閉じず、操作部分はコンパクトに整列させています。
-- [IBM Carbon Motion](https://www.carbondesignsystem.com/building-blocks/foundations/motion/overview): “Reserve expressive motion for occasional, important moments” 常時再生やスクロールの強制を行わず、選択の瞬間に動きを絞っています。
-- [W3C Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html): ボタンはネイティブ要素で、Enter / Spaceで操作可能。
-- [W3C Target Size](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html): 最低24 CSS pxという基準に対し、主要な選択・前後操作は高さ44px以上を確保。
-- [W3C Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html): 非必須の操作起因アニメーションを無効にできる考え方に従い、OSの `prefers-reduced-motion` をCSSとJavaScriptで尊重。この項目はAAAの説明資料であり、サイト全体の適合認証を意味しません。
+焼鳥と煮込みは同じ元画像の別の範囲です。別撮影のように説明していません。現状の接写で内容が成立するため、新しい画像は必須ではありません。
 
-企業サイトの観察と公式ガイドラインは区別しています。他社の画像・コピー・コードは転用していません。
+## 公式指針と、採用した読みやすさ
 
+[デジタル庁 タイポグラフィ](https://design.digital.go.jp/dads/foundations/typography/)の本文・UIの基準は16 CSS px以上、読み物本文の行高は少なくとも文字サイズの1.5倍という記述を本文設計へ適用。主要本文・品名・操作は16px、補足・キャプションは14pxを基本とし、本文の行高は1.8〜1.85。ブランドの見出し書体と大きさは別に設計しています。デジタル庁のデザインシステム全体への準拠を意味しません。
 
-## 実画面レビューからの補正
+[Apple Layout](https://developer.apple.com/design/human-interface-guidelines/layout)の重要度に基づく順序、[Apple Motion](https://developer.apple.com/design/human-interface-guidelines/motion)と[Carbon Motion](https://www.carbondesignsystem.com/building-blocks/foundations/motion/overview)の目的ある短い動きという原則を継続。OSのprefers-reduced-motionを尊重し、通常カーソル、キーボード、自由な縦スクロールを保ちます。
 
-飲みものの選択写真は宴会写真のビール部分を切り出したものへ変更。ジョッキ全体が見えるよう上側を優先し、選択中の商品と写真を一致させました。
-
-
-## 文字組みと連続性
-
-札の一二三と斜め矢印、英語の章ラベル、小見出し上下の囲み線を除去。料理の説明は写真の列につなぎ、全面幅の理念帯を解消。宴会ポスターの文字と料金は保持し、内部の細かな罫線を削減。料理ページのカテゴリは箱型ボタンから選択下線へ変更。メニュー名と価格を実用的な大きさと行間に揃え、宴会デモは装飾カードの影と回転を外して入力部分を明確にしています。
+企業サイトの観察は公式の規範と区別しています。他社のコピー・ロゴ・写真・コードは流用していません。Starbucks Voiceは設計段階で検索索引のみ確認された資料で、本文を直接読めた資料として採用していません。

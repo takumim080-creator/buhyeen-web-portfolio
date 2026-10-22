@@ -1,0 +1,58 @@
+/* A window, a small menu, and one readable letter. */
+body main p:not(.tiny):not(.note):not(.fiction-note):not(.menu-amount){font-size:16px;line-height:1.85}
+body main .tiny,body main .note,body main .fiction-note,body figcaption{font-size:14px;line-height:1.7}
+body .footer-note p{font-size:14px;line-height:1.7}body .footer-note small{font-size:12px}
+body .menu-list dt,body .menu-list dd,body .info-list dd,body .faq summary,body dialog p{font-size:16px}
+body .menu-list small,body .info-list dt{font-size:14px;line-height:1.75}
+body main a,body main button,body dialog button{font-size:16px}
+.home-page main a{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px;display:inline-block;min-height:44px;line-height:1.7;padding-block:7px}
+.window-heading{display:flex;align-items:baseline;justify-content:space-between;padding:20px 0 26px;gap:25px}
+.window-heading h1{font-size:58px;letter-spacing:.13em;line-height:1.5;margin:0;font-weight:400}
+.window-heading p{margin:0;letter-spacing:.06em}
+.window-view{width:94%;margin:0 3%;height:min(52vw,660px);overflow:hidden}
+.window-view img{width:100%;height:100%;object-fit:cover;object-position:50% 56%}
+.window-hours{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:25px}
+.window-hours p{margin:0;font-variant-numeric:tabular-nums}
+.window-hours span{margin-left:28px}
+.small-menu{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:30px 24px;padding:100px 0 80px;align-items:start}
+.small-menu-heading{grid-column:1/6;grid-row:1;padding-left:4%}
+.small-menu-heading h2{font-size:42px;line-height:1.6;letter-spacing:.03em;margin:0 0 20px}
+.small-menu-heading p{margin:0}
+.daily-coffee{grid-column:1/5;grid-row:2;margin-top:10px}
+.daily-pudding{grid-column:7/13;grid-row:1/3;margin-top:50px}
+.small-menu figure>img{width:100%;height:auto;aspect-ratio:1.25;object-fit:cover}
+.daily-coffee>img{aspect-ratio:1!important}
+.small-menu figcaption{display:grid;grid-template-columns:1fr auto;gap:12px 20px;margin-top:22px}
+.small-menu h3{font-size:24px;line-height:1.6;font-weight:400;letter-spacing:.02em;margin:0}
+.small-menu figcaption>p:not(.menu-amount),.small-menu figcaption>a{grid-column:1/3;margin:0}
+.small-menu .menu-amount{font:26px/1.6 "Yu Mincho",serif;margin:0;white-space:nowrap;font-variant-numeric:tabular-nums}
+.menu-amount span{font:14px/1.7 sans-serif;margin-left:4px}
+.small-menu-note{grid-column:7/13;font-size:14px!important;margin:0}
+.counter-letter{padding:20px 0 80px}
+.counter-letter>h2{font-size:30px;letter-spacing:.06em;font-weight:400;margin:0 0 35px}
+.toast-letter{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start;max-width:1050px;margin:auto}
+.toast-letter figure{padding-top:25px}
+.toast-letter figure img{width:100%;height:auto;aspect-ratio:.95;object-fit:cover;object-position:30% center}
+.toast-letter figcaption{margin-top:12px}
+.letter-intro{margin:0 0 16px}
+.reading-letter{border:0;padding:0}
+.reading-letter summary{cursor:pointer;list-style:none;padding:0}
+.reading-letter summary::-webkit-details-marker{display:none}
+.letter-name{display:block;font:32px/1.65 "Yu Mincho",serif;letter-spacing:.02em}
+.reading-label{display:inline-block;font-size:16px;line-height:1.7;padding:12px 0 6px;margin-top:12px;border-bottom:1px solid var(--ink);min-height:44px}
+.letter-body{padding-top:15px;max-width:34em}
+.letter-body p{margin:0 0 20px}
+.letter-body a{margin-top:3px}
+.cafe-visit{display:flex;gap:65px;align-items:flex-start;padding:10px 0 70px;max-width:1050px}
+.cafe-visit h2{font-size:30px;line-height:1.6;font-weight:400;letter-spacing:.02em;margin:0;flex:1}
+.cafe-visit>div{flex:1.1}
+.cafe-visit p{margin:0 0 15px}
+.cafe-visit .fiction-note{margin-top:20px}
+.photo-prepared{overflow:hidden}.photo-prepared img{clip-path:inset(0 2%);transition:clip-path .8s cubic-bezier(.2,.6,.3,1)}
+.photo-prepared.photo-shown img{clip-path:inset(0)}
+@media(hover:hover) and (pointer:fine){.home-page main a:hover,.reading-letter summary:hover .reading-label{color:var(--accent)}}
+@media(max-width:1000px){.small-menu{column-gap:18px}.small-menu-heading h2{font-size:35px}.daily-coffee{grid-column:1/6}.daily-pudding{grid-column:7/13}.small-menu h3{font-size:21px}.small-menu figcaption{column-gap:10px}.small-menu .menu-amount{font-size:23px}.menu-amount span{font-size:12px}.toast-letter{gap:35px}.letter-name{font-size:28px}}
+@media(max-width:700px){.window-heading{display:block;padding:15px 0 23px}.window-heading h1{font-size:38px;margin-bottom:12px;letter-spacing:.1em}.window-heading p{letter-spacing:.02em}.window-view{height:430px;width:100%;margin:0}.window-view img{object-position:40% 50%}.window-hours{align-items:flex-start;padding:18px 0;gap:16px}.window-hours p{font-size:14px!important;line-height:1.8!important}.window-hours span{display:block;margin-left:0}.window-hours a{font-size:14px;white-space:nowrap}.small-menu{display:block;padding:50px 0}.small-menu-heading{padding:0;margin-bottom:30px}.small-menu-heading h2{font-size:32px;line-height:1.5;margin-bottom:20px}.small-menu-heading h2 br{display:none}.daily-coffee{width:82%;margin:0 0 45px}.daily-pudding{width:92%;margin:0 0 25px auto}.small-menu figure>img{aspect-ratio:1.15}.small-menu figcaption{gap:10px 12px;margin-top:15px}.small-menu h3{font-size:22px}.small-menu .menu-amount{font-size:24px}.menu-amount span{font-size:12px}.small-menu-note{margin:25px 0 0 8%;font-size:14px!important}.counter-letter{padding:15px 0 50px}.counter-letter>h2{font-size:27px;margin-bottom:24px}.toast-letter{display:block}.toast-letter figure{width:78%;padding:0;margin:0 0 24px}.toast-letter figure img{aspect-ratio:1.25}.letter-intro{margin-bottom:12px}.letter-name{font-size:27px;line-height:1.6}.letter-body{padding-top:12px}.cafe-visit{display:block;padding:5px 0 45px}.cafe-visit h2{font-size:27px;margin-bottom:25px}.window-view{height:105vw;max-height:490px}.page-menu .menu-list>div{column-gap:15px}.page-menu .menu-list small{font-size:14px}.inner-page .page-heading h1{font-size:34px}}
+@media(max-width:359px){.window-heading h1{font-size:34px}.daily-coffee{width:92%}.daily-pudding{width:100%}.small-menu h3{font-size:20px}.small-menu .menu-amount{font-size:21px}.small-menu figcaption{gap:10px}.small-menu .menu-amount span{font-size:11px}.letter-name{font-size:24px}}
+@media(prefers-reduced-motion:reduce){.photo-prepared img{clip-path:none!important;transition:none!important}}
+
