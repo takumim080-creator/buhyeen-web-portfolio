@@ -86,3 +86,5 @@ body .dish-dialog-note{font-size:14px;line-height:1.7;margin:18px 0 0}
 @media(max-width:359px){.supper-heading h1{font-size:35px}.yakitori-special>figcaption{display:block}.yakitori-special figcaption>div:last-child{text-align:left;margin-top:12px}.yakitori-special .dish-amount span{display:inline}.side-specials{gap:16px;grid-template-columns:1.25fr 1fr}.beer-special>img{height:180px}.side-specials .dish-open{font-size:13px}.near-counter dt{font-size:14px}}
 @media(prefers-reduced-motion:reduce){.dish-dialog{animation:none!important}}
 
+
+.page-menu main .category-nav button,.inner-page main label,.inner-page main select,.inner-page main .cta,.inner-page main .dish-title{font-size:16px;line-height:1.6}.inner-page main .info-list dd{font-size:16px;line-height:1.8}.inner-page main .info-list dt{font-size:14px}.page-party main .course-list li{font-size:16px;line-height:1.7}.home-page main .dish-open{font-size:16px}.dish-amount span,.course-amount span{font-size:14px!important}

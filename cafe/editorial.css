@@ -56,3 +56,5 @@ body main a,body main button,body dialog button{font-size:16px}
 @media(max-width:359px){.window-heading h1{font-size:34px}.daily-coffee{width:92%}.daily-pudding{width:100%}.small-menu h3{font-size:20px}.small-menu .menu-amount{font-size:21px}.small-menu figcaption{gap:10px}.small-menu .menu-amount span{font-size:11px}.letter-name{font-size:24px}}
 @media(prefers-reduced-motion:reduce){.photo-prepared img{clip-path:none!important;transition:none!important}}
 
+
+.page-menu main .menu-list dt,.page-menu main .menu-list dd{font-size:16px;line-height:1.75}.inner-page main .info-list dd{font-size:16px;line-height:1.8}.inner-page main .info-list dt{font-size:14px}.inner-page main .button,.page-menu main .menu-jump a{font-size:16px}.menu-amount span{font-size:14px!important}body .site-footer .footer-bottom p{font-size:14px;line-height:1.7}body .site-footer .footer-bottom small{font-size:12px}body .site-footer nav{font-size:14px}
