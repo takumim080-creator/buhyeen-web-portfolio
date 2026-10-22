@@ -1,17 +1,7 @@
-# NOMA DRIP design rationale
+# NOMA DRIP — 持ち物から考える道具
 
-The home page is a field manual: one photo viewport changes between folded, expanded/setup concept and brewing. Stage controls, caption, price and demo action sit together. The same lifestyle photo no longer recurs in the hero, story, feature and closing sections. Specifications are a data sheet and longer story is an expandable field note. The guide is a continuous manual with a contents index.
+冒頭は器具本体と付属ケースの造形。次に付属2点と別途必要な5点を区別する持ち物の確認。チェックに応じて未確認の品名と進捗が変わり、保存も送信もしない。収納時と展開時は同時に比べ、必要な写真を拡大する。工程は後段の文章と抽出イメージにまとめた。冒頭の三択写真交換は廃止。
 
-PC: a photograph can be explicitly opened for inspection; a small local crosshair and native zoom cursor identify that action. Mobile: labelled stage buttons and next/previous controls; optional horizontal gesture, native vertical scroll. All stages remain available by keyboard. No real mechanical performance is asserted.
+KINTO の周辺器具との関係、BALMUDA の全体と細部の距離の見せ方を観察。IBM Photography に沿い画像を性能証明にしない。Atlassian Content に沿い操作実況を目的と結果の言葉へ整理。余白は商品写真と実用的な持ち物リストで使い分ける。
 
-## Official principles used
-
-- [Apple HIG Layout](https://developer.apple.com/design/human-interface-guidelines/layout): put the product sequence and price before supplementary brand text. Keep functions across screen sizes.
-- [Apple HIG Motion](https://developer.apple.com/design/human-interface-guidelines/motion): use optional, precise feedback and let people change state or close the inspection immediately.
-- [IBM Carbon Typography](https://www.carbondesignsystem.com/building-blocks/foundations/typography/style-strategies): separate editorial masthead from compact task controls; do not force the narrative into repeated cards.
-- [IBM Carbon Motion](https://www.carbondesignsystem.com/building-blocks/foundations/motion/overview): the short progress-line movement explains stage order. Photographs change immediately, with no repeated fade or autoplay.
-
-These are principles applied to a web portfolio, not claims of platform certification. No company photograph, layout or code was copied.
-
-
-文字組みの仕上げ：工程番号は意味のある順序として維持し、重複英語見出しを削除。独立した読みもの枠は抽出工程の短い補足に統合。スマホの工程ラベルは句の境目で改行。
+キーボードのチェック、44px以上の操作域、拡大のEscとフォーカス復帰、通常カーソルと標準スクロールを維持。穏やかな進捗変化を設け、動きを控える設定で停止できる。未検証の素材・寸法・適合を数値で補わない。

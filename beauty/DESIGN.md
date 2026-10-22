@@ -1,17 +1,7 @@
-# SUIRO design rationale
+# SUIRO — 写真の卓上とお手入れ
 
-A large photograph is the stage for choosing one product. Name, texture, size, price and background respond to the selection. The catalogue is a comparison ledger, not three repeated photo cards. Brand text is an optional note; the next chapter is the actual skincare sequence. The journal uses one reading column and a contents margin.
+冒頭は美容液の一枚とブランドの言葉。次の集合写真は固定し、容器の近くで感触・容量・価格・使う順序を読む。単品大写真交換と三品アコーディオンの反復は廃止。製品一覧は容量・価格の比較、詳細は使用方法と注意、ブランドと読みものは連続した文章に分けた。
 
-PC: bounded light and slight movement inside the product photo only; labelled choice buttons remain the primary control. Mobile: large horizontal choice buttons, native vertical scrolling, and an optional horizontal gesture. Keyboard has the same choices. The native cursor is never hidden.
+OSAJI と SHIRO の観察から、単品へ分割する前にシリーズの関係を見せる。各製品の中身写真は手持ちにないため、汎用の滴を処方の写真と称さない。IBM Photography の被写体を誠実に描く原則、Atlassian Content の明瞭で簡潔な言葉、デジタル庁の余白による近接と階層を適用。
 
-## Official principles used
-
-- [Apple HIG Layout](https://developer.apple.com/design/human-interface-guidelines/layout): prioritize product choice and price, then reveal supplemental brand reading. Preserve the same choices at different widths.
-- [Apple HIG Motion](https://developer.apple.com/design/human-interface-guidelines/motion): motion supports the selection and is optional. Media-query reduction and an explicit control remove motion while leaving all information.
-- [IBM Carbon Typography](https://www.carbondesignsystem.com/building-blocks/foundations/typography/style-strategies): use an open editorial photographic space, with compact task controls and a clear scale difference.
-- [IBM Carbon Motion](https://www.carbondesignsystem.com/building-blocks/foundations/motion/overview): reserve the more visible transition for product changes; keep hover feedback brief and avoid page-wide movement.
-
-These are principles applied to a web portfolio, not claims of platform certification. No layout or code from the reference companies was copied.
-
-
-文字組みの仕上げ：製品選択は使う順序と相互連動。装飾英字・選択番号・＋を削り、日本語の名称と感触を近づけた。手順の開閉は＋／−。
+通常カーソルと標準スクロール、44px以上の操作域、キーボードと可視フォーカスを維持。選択で動くのは説明の位置と短い表示変化だけ。動きを控える設定でも全内容を読める。
