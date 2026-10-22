@@ -9,3 +9,4 @@
 @media(max-width:900px){.table-scene{max-width:none}}
 
 .table-photo{position:relative}.table-photo>img{height:auto;aspect-ratio:3/2;object-fit:contain}
+.table-detail .table-texture{font-size:1rem}
