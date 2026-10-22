@@ -28,7 +28,8 @@
  const dialog=document.querySelector('#stall-detail');let opener=null,bodyOverflow='';
  const openStall=(id,trigger)=>{
   const stall=byId.get(id);if(!stall)return;opener=trigger||[...document.querySelectorAll('[data-open-stall]')].find(b=>b.dataset.openStall===id&&b.getClientRects().length);
-  const image=dialog.querySelector('#stall-photo');image.src='assets/'+stall.image+'.jpg';image.alt=stall.alt;
+  const image=dialog.querySelector('#stall-photo'),photoStatus=dialog.querySelector('#stall-photo-status');image.hidden=true;photoStatus.hidden=false;photoStatus.textContent='写真を読み込み中';image.parentElement.setAttribute('aria-busy','true');
+  const showPhoto=()=>{image.hidden=false;photoStatus.hidden=true;image.parentElement.setAttribute('aria-busy','false');};image.onload=showPhoto;image.onerror=()=>{photoStatus.textContent='写真を読み込めませんでした。紹介文と時刻はご覧いただけます。';image.parentElement.setAttribute('aria-busy','false');};image.src='assets/'+stall.image+'.jpg';image.alt=stall.alt;if(image.complete&&image.naturalWidth)showPhoto();
   dialog.querySelector('#stall-zone').textContent=stall.category+'　'+stall.zone;dialog.querySelector('#stall-title').textContent=stall.name;dialog.querySelector('#stall-description').textContent=stall.text;dialog.querySelector('#stall-hours').textContent=stall.hours;
   const actions=dialog.querySelector('#stall-memo-actions');actions.replaceChildren();
   const options=stall.sessions?stall.sessions.map(([entryId,time])=>({id:entryId,label:time+'　'})):[{id:stall.id,label:''}];
@@ -40,7 +41,7 @@
  };
  document.querySelectorAll('[data-open-stall]').forEach(button=>button.addEventListener('click',()=>openStall(button.dataset.openStall,button)));
  dialog.querySelector('.stall-close').addEventListener('click',()=>dialog.close());
- dialog.addEventListener('keydown',event=>{if(event.key==='Escape')event.stopPropagation();});
+ dialog.addEventListener('keydown',event=>{if(event.key==='Escape')event.stopPropagation();if(event.key==='Tab'){const controls=[...dialog.querySelectorAll('button:not([disabled]),a[href]')].filter(e=>e.getClientRects().length),first=controls[0],last=controls[controls.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}});
  dialog.addEventListener('close',()=>{document.body.style.overflow=bodyOverflow;document.querySelectorAll('[data-open-stall]').forEach(b=>b.setAttribute('aria-expanded','false'));if(opener&&getComputedStyle(opener).display!=='none')opener.focus();const url=new URL(location.href);if(url.searchParams.has('stall')){url.searchParams.delete('stall');history.replaceState(null,'',url);}});
  render();const requested=new URLSearchParams(location.search).get('stall');if(document.querySelector('.night-atlas')&&byId.has(requested))openStall(requested);
 })();
