@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+ <title>余日｜4画面と制作意図</title>
+ <meta name="description" content="地域の体験を選ぶ4画面の提案用試作。体験の発見、詳細、日時・人数、申込内容の確認まで。用途・ブランド・料金・日程は仮設定です。">
+ <meta property="og:title" content="余日｜4画面の提案用試作">
+ <meta property="og:type" content="website">
+ <meta property="og:image" content="https://takumim080-creator.github.io/buhyeen-web-portfolio/ui-yojitsu/images/overview.png">
+ <meta name="twitter:card" content="summary_large_image">
+ <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+ <header class="wrap top"><a href="../">余日 / YOJITSU</a><a class="action" href="../">試作を操作する →</a></header>
+ <main class="wrap">
+  <section class="intro"><p class="eyebrow">UI / UX CONCEPT</p><h1>地域の体験を選ぶ、<br>4画面の提案用試作。</h1><p>発見・一覧から、体験の理解、日時・人数の選択、申込前の内容確認まで。<br>ひとつの体験を選ぶ流れを、操作できる形にしました。</p><p class="notice">用途・ブランド・体験・工房・料金・日程は、提案用の仮設定です。<br>実際の予約・決済・個人情報送信はありません。</p><a class="action primary" href="../">試作を操作する →</a></section>
+  <section aria-labelledby="overview-title"><div class="section-head"><h2 id="overview-title">4画面のつながり</h2><a href="../images/overview.png">一覧画像を大きく見る</a></div><a href="../images/overview.png"><img class="overview" src="../images/overview.png" alt="発見・一覧、体験詳細、日時・人数選択、申込内容確認を並べた比較一覧" width="3120" height="2130"></a></section>
+  <section class="screens" aria-label="各画面の画像">
+   <article><p class="eyebrow">01 / DISCOVER</p><h2>発見・一覧</h2><p>場所・体験内容・所要時間・料金を揃え、選ぶ手がかりを近くに。</p><a href="../images/01-discover.png"><img src="../images/01-discover.png" alt="余日、地域の体験を探す一覧画面" width="1170" height="2532" loading="lazy"></a></article>
+   <article><p class="eyebrow">02 / EXPERIENCE</p><h2>体験の詳細</h2><p>体験の流れは時間軸で。持ちものや受け取り条件は必要なときに開く構成。</p><a href="../images/02-detail.png"><img src="../images/02-detail.png" alt="茶碗づくりの説明と体験の流れを示す詳細画面" width="1170" height="2532" loading="lazy"></a></article>
+   <article><p class="eyebrow">03 / SELECT</p><h2>日時・人数を選ぶ</h2><p>日付、時間、人数の順に選択。選択状態と合計金額が連動します。</p><a href="../images/03-select.png"><img src="../images/03-select.png" alt="11月7日10時、大人2名を選択し合計9600円を表示した画面" width="1170" height="2532" loading="lazy"></a></article>
+   <article><p class="eyebrow">04 / REVIEW</p><h2>申込内容を確かめる</h2><p>日付・時刻・人数・金額を照合。変更するときは、選択済みの画面へ戻れます。</p><a href="../images/04-review.png"><img src="../images/04-review.png" alt="日時、人数、集合時刻と料金を照合する確認画面" width="1170" height="2532" loading="lazy"></a></article>
+  </section>
+  <section class="notes"><h2>制作意図</h2><p>重要な情報、次の行動、補足情報の順に整理しました。体験を見つける画面では余白と図版、選択では状態の分かりやすさ、確認では日時と金額の読み取りを重視しています。文字サイズが変わったときにも内容が折り返す構成です。</p><p>図版はこの試作のためのオリジナルSVG。既存アプリの固有ロゴ・配色・画面の再現は行っていません。</p><h3>設計上の参照</h3><ul><li><a href="https://developer.apple.com/design/tips/">Apple — UI Design Dos and Don’ts</a>：操作域、読みやすさ、配置。</li><li><a href="https://developer.apple.com/design/human-interface-guidelines/layout">Apple HIG — Layout</a>：情報の優先順位、段階的な表示、幅と文字サイズへの適応。</li><li><a href="https://developer.apple.com/news/?id=970ncww4">Apple — Behind the Design: Flighty</a>：必要な情報を分かりやすい位置に保つ考え方。</li><li><a href="https://culturedcode.com/things/features/">Things — Features</a>：見出しで分け、必要な詳細を段階的に示す考え方。</li></ul><h3>この検討案の範囲</h3><p>陶芸体験1件で4画面を操作できます。一覧のお茶・まち歩きは表示イメージです。空き状況や工房には接続していません。選択値はページを開いている間だけ保持し、再読み込みで初期化します。</p></section>
+ </main><footer class="wrap">余日 / 4画面の提案用試作 <a href="../">試作を操作する →</a></footer>
+</body></html>
